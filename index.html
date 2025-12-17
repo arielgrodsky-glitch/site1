@@ -1,0 +1,123 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header_wrap">
+                <div class="upper">
+                    <img src="img/logo1.png" alt="logo" />
+                    <h1>Freddy's Home</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="service"><h2>OUR SERVICES</h2></div>
+                <div class="services_wrap">
+                    <div class="service_items">
+                        <a href="#">
+                            <h3>Movies</h3>
+                            <img src="img/movie.png" alt="movie_and_videos">
+                            <p>We can recommend movies and videos</p>
+                        </a>
+                        <button class="like-btn">
+                            <img src="img/heart1.png" alt="like" />
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+
+                    <div class="service_items">
+                        <a href="#">
+                            <h3>Games</h3>
+                            <img src="img/game.png" alt="games">
+                            <p>We can recommend games</p>
+                        </a>
+                        <button class="like-btn">
+                            <img src="img/heart1.png" alt="like" />
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+
+                    <div class="service_items">
+                        <a href="#">
+                            <h3>Info</h3>
+                            <img src="img/info.png" alt="info">
+                            <p>There is plenty of info</p>
+                        </a>
+                        <button class="like-btn">
+                            <img src="img/heart1.png" alt="like" />
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_wrap">
+                <div class="links">
+                    <a href="https://www.instagram.com/ariel_grodsky/">
+                        <div class="social">
+                            <img src="img/insta.jpg" alt="insta" />
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/en/">
+                        <div class="social">
+                            <img src="img/tiktok.png" alt="tiktok" />
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@FuhNaff">
+                        <div class="social">
+                            <img src="img/youtube.png" alt="youtube" />
+                        </div>
+                    </a>
+                </div>
+                <div class="down">
+                    <img class="logo" src="img/logo1.png" alt="logo" />
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contacts.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p>© 2025 My Website. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    const likeButtons = document.querySelectorAll(".like-btn");
+
+    likeButtons.forEach(button => {
+        const counter = button.querySelector(".like-count");
+        let likes = 0;
+
+        button.addEventListener("click", () => {
+            likes++;
+            counter.textContent = likes;
+        });
+    });
+    </script>
+</body>
+</html>
