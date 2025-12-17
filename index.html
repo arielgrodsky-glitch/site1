@@ -30,10 +30,9 @@
     <main>
         <section>
             <div class="container">
-                <div class="service"><h2>OUR SERVICES</h2></div>
-                <div class="services_wrap">
-                    <div class="service_items">
-                        <a href="#">
+                <div class="items_wrap">
+                    <div class="items">
+                        <a href="about.html">
                             <h3>Movies</h3>
                             <img src="img/movie.png" alt="movie_and_videos">
                             <p>We can recommend movies and videos</p>
@@ -42,9 +41,10 @@
                             <img src="img/heart1.png" alt="like" />
                             <span class="like-count">0</span>
                         </button>
+                        <span class="view-count">👁 0 views</span>
                     </div>
 
-                    <div class="service_items">
+                    <div class="items">
                         <a href="#">
                             <h3>Games</h3>
                             <img src="img/game.png" alt="games">
@@ -54,18 +54,20 @@
                             <img src="img/heart1.png" alt="like" />
                             <span class="like-count">0</span>
                         </button>
+                        <span class="view-count">👁 0 views</span>
                     </div>
 
-                    <div class="service_items">
+                    <div class="items">
                         <a href="#">
                             <h3>Info</h3>
                             <img src="img/info.png" alt="info">
-                            <p>There is plenty of info</p>
+                            <p>There is plenty of info about this game</p>
                         </a>
                         <button class="like-btn">
                             <img src="img/heart1.png" alt="like" />
                             <span class="like-count">0</span>
                         </button>
+                        <span class="view-count">👁 0 views</span>
                     </div>
                 </div>
             </div>
@@ -116,6 +118,21 @@
         button.addEventListener("click", () => {
             likes++;
             counter.textContent = likes;
+        });
+    });
+    const services = document.querySelectorAll(".items");
+
+    services.forEach(service => {
+         const viewText = service.querySelector(".view-count");
+         let views = 0;
+
+         service.addEventListener("click", () => {
+             views++;
+             viewText.textContent = `👁 ${views} views`;
+         });
+        const likeBtn = service.querySelector(".like-btn");
+        likeBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
         });
     });
     </script>
