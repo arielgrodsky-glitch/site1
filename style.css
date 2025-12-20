@@ -1,6 +1,4 @@
-﻿
-
-body {
+﻿.body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     display: flex;
@@ -29,6 +27,7 @@ header {
 }
 .upper {
     display: flex;
+    justify-content: space-between;
 }
 .upper img {
     width: 200px;
@@ -59,70 +58,7 @@ main {
 main img {
     cursor: pointer;
 }
-    main .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-.items {
-    background: #111;
-    margin: 10px;
-    padding: 30px 20px;
-    border-radius: 12px;
-    border: 2px solid #8b0000;
-    /*קצת עזרה מהצאט*/
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.5), inset 0 0 15px rgba(255, 0, 0, 0.1);
-    color: #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px;
-    box-sizing: border-box;
-}
-.items p {
-     min-height: 3em;
-}
-.items button {
-     width: 50px;
-     background: transparent;
-     border: none;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     transition: transform 0.5s ease;
-}
-.items button:hover img {
-     transform: scale(1.2);
-     filter: drop-shadow(0 0 5px red) drop-shadow(0 0 5px red);
-}
-.like-btn {
-    gap: 6px;
-    color: white;
-    font-size: 18px;
-}
-.items img {
-    max-width: 100%;
-    height: auto;
-}
-.items h3 {
-    font-size: 24px;
-}
-    /*קצת עזרה מהצאט*/
-.items:hover {
-    transform: translateY(-5px) rotate(-2deg);
-    box-shadow: 0 0 20px rgba(139, 0, 0, 0.8), inset 0 0 25px rgba(255, 0, 0, 0.15);
-}
-.items_wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 100px;
-    font-size: 20px;
-    text-align: center;
-}
-.items_wrap a {
-    text-decoration: none;
-    color: white;
-}
+   
 /* Sections */
 .section {
     padding: 40px 0;
@@ -182,11 +118,15 @@ footer {
 }
 .down {
     display: flex;
+    justify-content: space-between;
 }
     .down img {
         width: 200px;
         height: 166.66px;
     }
+.space {
+    width: 200px;
+}
 .logo {
     width: 246px;
     height: 205px;

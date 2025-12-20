@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -8,13 +7,13 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
     <header>
         <div class="container">
             <div class="header_wrap">
                 <div class="upper">
                     <img src="img/logo1.png" alt="logo" />
                     <h1>Freddy's Home</h1>
+                    <div class="space"></div>
                 </div>
                 <nav>
                     <ul>
@@ -28,50 +27,7 @@
     </header>
 
     <main>
-        <section>
-            <div class="container">
-                <div class="items_wrap">
-                    <div class="items">
-                        <a href="about.html">
-                            <h3>Movies</h3>
-                            <img src="img/movie.png" alt="movie_and_videos">
-                            <p>We can recommend movies and videos</p>
-                        </a>
-                        <button class="like-btn">
-                            <img src="img/heart1.png" alt="like" />
-                            <span class="like-count">0</span>
-                        </button>
-                        <span class="view-count">👁 0 views</span>
-                    </div>
 
-                    <div class="items">
-                        <a href="#">
-                            <h3>Games</h3>
-                            <img src="img/game.png" alt="games">
-                            <p>We can recommend games</p>
-                        </a>
-                        <button class="like-btn">
-                            <img src="img/heart1.png" alt="like" />
-                            <span class="like-count">0</span>
-                        </button>
-                        <span class="view-count">👁 0 views</span>
-                    </div>
-
-                    <div class="items">
-                        <a href="#">
-                            <h3>Info</h3>
-                            <img src="img/info.png" alt="info">
-                            <p>There is plenty of info about this game</p>
-                        </a>
-                        <button class="like-btn">
-                            <img src="img/heart1.png" alt="like" />
-                            <span class="like-count">0</span>
-                        </button>
-                        <span class="view-count">👁 0 views</span>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -103,38 +59,11 @@
                             <li><a href="contacts.html">Contact</a></li>
                         </ul>
                     </nav>
+                    <div class="space"></div>
                 </div>
                 <p>© 2025 My Website. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script>
-    const likeButtons = document.querySelectorAll(".like-btn");
-
-    likeButtons.forEach(button => {
-        const counter = button.querySelector(".like-count");
-        let likes = 0;
-
-        button.addEventListener("click", () => {
-            likes++;
-            counter.textContent = likes;
-        });
-    });
-    const services = document.querySelectorAll(".items");
-
-    services.forEach(service => {
-         const viewText = service.querySelector(".view-count");
-         let views = 0;
-
-         service.addEventListener("click", () => {
-             views++;
-             viewText.textContent = `👁 ${views} views`;
-         });
-        const likeBtn = service.querySelector(".like-btn");
-        likeBtn.addEventListener("click", (event) => {
-            event.stopPropagation();
-        });
-    });
-    </script>
 </body>
 </html>
