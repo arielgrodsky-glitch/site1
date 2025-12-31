@@ -15,6 +15,24 @@ document.querySelectorAll(".items").forEach(i => {
     if (d.count) i.querySelector(".like-count").textContent = d.count;
     if (d.liked) i.querySelector("button").classList.add("liked");
 });
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".items").forEach(item => {
+        const id = item.dataset.id;
+        const button = item.querySelector("button");
+        const countSpan = item.querySelector(".like-count");
+
+        const savedLiked = localStorage.getItem(id + "_liked");
+        const savedCount = localStorage.getItem(id + "_count");
+
+        if (savedCount !== null) {
+            countSpan.textContent = savedCount;
+        }
+
+        if (savedLiked === "true") {
+            button.classList.add("liked");
+        }
+    });
+});
 function View(el) {
     let viewsSpan = el.closest('.items, .service_wrap').querySelector('.views');
     let currentViews = parseInt(viewsSpan.textContent.replace(/[^\d]/g, '')) || 0;
